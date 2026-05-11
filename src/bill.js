@@ -64,7 +64,10 @@ const order = () => {
 
 // 支払い処理の関数
 // price: 商品の価格, paidAmount: 支払金額
-function payment(price, paidAmount) {
+const payment = () => {
+    let price = document.getElementById("total_amount").value;
+    let paidAmount = document.getElementById("payment_amount").value;
+
   // 1. 支払金額のチェック
   // 足りない場合はコンソールにメッセージを出力して終了
   if (paidAmount < price) {
