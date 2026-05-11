@@ -12,6 +12,11 @@
     <input type="text" id="itemName" placeholder="商品名を入力">
     <input type="number" id="orderNum" placeholder="注文数を入力">
     <button onclick="order()">確認</button>
+    <div class="payment">
+        <input type="number" id="total_amount" placeholder="合計金額を入力">
+        <input type="number" id="payment_amount" placeholder="支払金額を入力">
+        <button onclick="payment()">支払う</button>
+    </div>
 
     <script src="bill.js" defer></script>
 </body>
