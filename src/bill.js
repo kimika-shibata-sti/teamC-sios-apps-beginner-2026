@@ -47,6 +47,9 @@ const calcOrderPrice = (items, itemName, orderNum) => {
 const order = () => {
     const itemName = document.getElementById("itemName").value;
     const orderNum = document.getElementById("orderNum").value;
+    //合計金額を表示する要素取得
+    const total_amount = document.getElementById("total_amount");
+    
     if (itemName == "" || orderNum == 0) {
         return "error"
     }
@@ -59,6 +62,8 @@ const order = () => {
         return "error"
     }
     console.log(`合計金額：${price}円`)
+    //合計金額に商品の値段を加算していく
+    total_amount.value = Number(total_amount.value) + price;
     return price
 }
 
